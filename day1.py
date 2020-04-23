@@ -12,12 +12,21 @@ def AddToK(array, k):
             if (array[i] + array[j] == k):
                 # If this is the case return True
                 return True
+    # No applicable value found, return false
+    return False            
 '''
 
 '''
 One pass version of AddToK
 '''
-
-#Test
-#Test
-#Test123
+def AddToK(array, k):
+    # Outer loop to get elements
+    for element in array:
+        # Difference, i.e. we find the value that we need for this statement to be true
+        # and then search to see if it exists in the array
+        Difference = k - element
+        if Difference in array:
+            # If this is the case return True
+            return True
+    # No applicable value found, return false
+    return False
