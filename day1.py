@@ -1,5 +1,8 @@
 
-# Main AddToK function
+'''
+# This version isn't as good as it has BigO complexity of O^{2}(N)
+# Which is polynomial and so an issue for large input lists 
+
 def AddToK(array, k):
     # Outer loop for initial value
     for i in range(0, (len(array) - 1)):
@@ -9,4 +12,4 @@ def AddToK(array, k):
             if (array[i] + array[j] == k):
                 # If this is the case return True
                 return True
-            
+'''
