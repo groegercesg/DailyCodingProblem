@@ -25,7 +25,12 @@ def AddToK(array, k):
         # Difference, i.e. we find the value that we need for this statement to be true
         # and then search to see if it exists in the array
         Difference = k - element
-        if Difference in array:
+        
+        ## Creation of a duplicate array, to dodge duplicate value test case
+        array_rem = list(array)
+        array_rem.remove(element)
+        
+        if Difference in array_rem:
             # If this is the case return True
             return True
     # No applicable value found, return false
