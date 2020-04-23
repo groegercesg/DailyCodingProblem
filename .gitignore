@@ -1,2 +1,3 @@
 # Ignore these weird ".pyc" files
 .pyc
+__pycache__/day1.cpython-37.pyc
