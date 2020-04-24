@@ -1,7 +1,7 @@
 
 '''
 # This version isn't as good as it has BigO complexity of O^{2}(N)
-# Which is polynomial and so an issue for large input lists 
+# Which is polynomial and so an issue for large input lists
 
 def AddToK(array, k):
     # Outer loop for initial value
@@ -13,23 +13,25 @@ def AddToK(array, k):
                 # If this is the case return True
                 return True
     # No applicable value found, return false
-    return False            
+    return False
 '''
 
 '''
 One pass version of AddToK
 '''
+
+
 def AddToK(array, k):
     # Outer loop to get elements
     for element in array:
-        # Difference, i.e. we find the value that we need for this statement to be true
-        # and then search to see if it exists in the array
+        # Difference, i.e. we find the value that we need for this statement
+        # to be true and then search to see if it exists in the array
         Difference = k - element
-        
-        ## Creation of a duplicate array, to dodge duplicate value test case
+
+        # Creation of a duplicate array, to dodge duplicate value test case
         array_rem = list(array)
         array_rem.remove(element)
-        
+
         if Difference in array_rem:
             # If this is the case return True
             return True
